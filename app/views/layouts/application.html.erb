@@ -1,61 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="A business card of Pawel Zienkiewicz">
   <meta name="author" content="Pawel Zienkiewicz">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cv - Pawel Zienkiewicz</title>
+  <title>Pawel Zienkiewicz - business card</title>
 
-  <%= stylesheet_link_tag    "bootstrap", :media => "all" %> 
-  <%= stylesheet_link_tag    "font"     , :media => "all" %> 
-
-  
-  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js' %>
-  <%= javascript_include_tag 'bootstrap-tabs' %>
-
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <% # = csrf_meta_tags %>
-
-    
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "bootstrap-responsive.min", :media => "all" %>
+  <%= stylesheet_link_tag    "font"    , :media => "all" %> 
 </head>
-<body>
 
-    <div class="topbar">
-      <div class="fill">
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Pawel Zienkiewicz</a>          
-
-          <%= tabs_tag :open_tabs => { :class => "nav" } do |tab|  %>
-            <%= tab.start      'Start'  , root_path %>
-            <%= tab.details    'Details'  , details_index_path %>
-            <%= tab.education  'Education', education_index_path %>
-            <%= tab.experience 'Experience', experience_index_path %>
-            <%= tab.skills     'Skills', skills_index_path %>
-            <%= tab.other      'Other', other_index_path %>
-            
-          <% end %>
-
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Pawel Zienkiewicz</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <%= link_to "Start", root_path %>
+              </li>
+              <li class="">
+                <%= link_to "Details", details_index_path %>
+              </li>
+              <li class="">
+                <%= link_to "Education", education_index_path %>
+              </li>
+              <li class="">
+                <%= link_to "Experience", experience_index_path %>
+              </li>
+              <li class="">
+                <%= link_to "Skills", skills_index_path %>
+              </li>
+              <li class="">
+                <%= link_to "Other", other_index_path %>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <div class="container main-content">
+        <%= yield %>
+    </div>
 
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Pawel Zienkiewicz.</p>
+      </div>
+    </footer>
 
-
-    <div class="container">
-      <br><br>
-      <br><br>
-      <%= yield %>
-      <%= footer_helper %>
-
-
-    </div> <!-- /container -->
+    <%= javascript_include_tag "jquery" %>
+    <%= javascript_include_tag "application" %>
     
-    
-
-
-
-</body>
+  </body>
 </html>

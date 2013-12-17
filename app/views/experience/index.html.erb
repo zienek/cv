@@ -1,33 +1,27 @@
-<script type="text/javascript">
-$(document).ready(function() {
-$('.tabs').tabs();
-});
-</script>
-
 <h1>Experience</h1>
 
 
 <div class="row">
   <div class="span16">
 
-    <ul class="tabs" data-tabs="tabs">
-      <li class="active"><a href="#criticue">Criticue</a></li>
-      <li><a href="#ncdc">NCDC</a></li>
-      <li><a href="#integra">Integra</a></li>
-      <li><a href="#tieto">Tieto</a></li>
-      <li><a href="#autocomp">Autocomp</a></li>
-      <li><a href="#juniorswimmingclub">Junior Swimming Club</a></li>
-      <li><a href="#lima">Lima</a></li>
+    <ul class="nav nav-tabs" data-tabs="tabs">
+      <li class="active"><a href="#criticue" data-toggle="tab">Criticue</a></li>
+      <li><a href="#ncdc" data-toggle="tab">NCDC</a></li>
+      <li><a href="#integra" data-toggle="tab">Integra</a></li>
+      <li><a href="#tieto" data-toggle="tab">Tieto</a></li>
+      <li><a href="#autocomp" data-toggle="tab">Autocomp</a></li>
+      <li><a href="#juniorswimmingclub" data-toggle="tab">Junior Swimming Club</a></li>
+      <li><a href="#lima" data-toggle="tab">Lima</a></li>
     </ul>
  
-    <div class="pill-content">
-      <div class="active" id="criticue"> <%= render "criticue" %> </div>
-      <div id="ncdc"> <%= render "ncdc" %> </div>
-      <div id="integra"> <%= render "integra" %> </div>
-      <div id="tieto"> <%= render "tieto" %> </div>
-      <div id="autocomp"> <%= render "autocomp" %> </div>
-      <div id="juniorswimmingclub"><%= render "juniorswimmingclub" %> </div>
-      <div id="lima"><%= render "lima" %> </div>
+    <div class="tab-content">
+      <div class="tab-pane active" id="criticue"> <%= render "criticue" %> </div>
+      <div class="tab-pane" id="ncdc"> <%= render "ncdc" %> </div>
+      <div class="tab-pane" id="integra"> <%= render "integra" %> </div>
+      <div class="tab-pane" id="tieto"> <%= render "tieto" %> </div>
+      <div class="tab-pane" id="autocomp"> <%= render "autocomp" %> </div>
+      <div class="tab-pane" id="juniorswimmingclub"><%= render "juniorswimmingclub" %> </div>
+      <div class="tab-pane" id="lima"><%= render "lima" %> </div>
     </div>
  
 
