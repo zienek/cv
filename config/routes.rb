@@ -5,6 +5,18 @@ Cv::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'start#index'
 
+  get "other/index"
+
+  get "skills/index"
+
+  get "experience/index"
+
+  get "education/index"
+
+  get "details/index"
+
+  get "start/index"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

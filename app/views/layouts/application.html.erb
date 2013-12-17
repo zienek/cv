@@ -31,11 +31,11 @@
 
           <%= tabs_tag :open_tabs => { :class => "nav" } do |tab|  %>
             <%= tab.start      'Start'  , root_path %>
-            <%  #= tab.details    'Details'  , details_index_path %>
-            <%  #= tab.education  'Education', education_index_path %>
-            <%  #= tab.experience 'Experience', experience_index_path %>
-            <%  #= tab.skills     'Skills', skills_index_path %>
-            <%  #= tab.other      'Other', other_index_path %>
+            <%= tab.details    'Details'  , details_index_path %>
+            <%= tab.education  'Education', education_index_path %>
+            <%= tab.experience 'Experience', experience_index_path %>
+            <%= tab.skills     'Skills', skills_index_path %>
+            <%= tab.other      'Other', other_index_path %>
             
           <% end %>
 
@@ -49,7 +49,7 @@
       <br><br>
       <br><br>
       <%= yield %>
-      < % =  footer_helper % >
+      <%= footer_helper %>
 
 
     </div> <!-- /container -->

@@ -1,0 +1,97 @@
+<script src="/assets/bootstrap-popover.js"></script>
+<script src="/assets/bootstrap-twipsy.js"></script>
+
+<div class="row">
+
+  <div class="span8">
+    <h1>Details</h1>
+
+
+    <table class="zebra-striped" id="myTable" >
+      <thead>
+        <tr>
+          <th>No.   </th>
+          <th>Detail</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.</td>
+          <td>Name</td>
+          <td>Paweł</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td>Surname</td>
+          <td>Zienkiewicz</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td>Gender</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>4.</td>
+          <td>Date of birth</td>
+          <td>14th of June 1985</td>
+        </tr>
+        <tr>
+          <td>5.</td>
+          <td>Nationality</td>
+          <td>Polish</td>
+        </tr>
+        <tr>
+          <td>6.</td>
+          <td>Mobile phone</td>
+          <td>0048 793 991 220</td>
+        </tr>
+        <tr>
+          <td>7.</td>
+          <td>e-mail</td>
+          <td>pz@lightec.pl</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/javascript">
+    	$(function() {		
+        $("#myTable").tablesorter(); 
+    	});	
+  	</script>
+
+  <br /><br />
+  <p>If you consider my experience as valuable for your business - feel free to contact me via e-mail or phone.</p>
+
+  </div>
+  <div class="span8">
+    <h1>Address</h1>
+    Reduty Ordona 72a/1 <br />
+    Szczecin 71-180 <br />
+    Poland<br />
+    
+    
+    <br /><br />
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.pl/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=szczecin&amp;aq=&amp;sll=52.025459,19.204102&amp;sspn=10.961742,28.54248&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Szczecin,+Zachodniopomorskie&amp;t=h&amp;ll=53.16324,13.980103&amp;spn=1.15269,2.334595&amp;z=8&amp;output=embed"></iframe>
+    <br /><small>
+    <a href="http://maps.google.pl/maps?f=q&amp;source=embed&amp;hl=pl&amp;geocode=&amp;q=szczecin&amp;aq=&amp;sll=52.025459,19.204102&amp;sspn=10.961742,28.54248&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Szczecin,+Zachodniopomorskie&amp;t=h&amp;ll=53.16324,13.980103&amp;spn=1.15269,2.334595&amp;z=8" style="color:#0000FF;text-align:left">Show bigger map</a></small>
+    
+    <br /><br />
+    <p>Szczecin is 143 km from Berlin, 501 km from Prague, and finally 566 km from Warsaw - the capital city of Poland.</p>
+    
+  </div>
+</div>
+
+
+
+          <script>
+            $(document).ready(function () {
+              $("a[rel=popover]")
+                .popover({
+                  offset: 10
+                })
+                .click(function(e) {
+                  e.preventDefault()
+                })
+            })
+          </script>
