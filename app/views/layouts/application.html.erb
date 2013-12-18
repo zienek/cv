@@ -32,19 +32,16 @@
                 <%= link_to "Start", root_path %>
               </li>
               <li class="">
-                <%= link_to "Details", details_index_path %>
+                <%= link_to "Experience", experience_index_path %>
               </li>
               <li class="">
                 <%= link_to "Education", education_index_path %>
               </li>
               <li class="">
-                <%= link_to "Experience", experience_index_path %>
-              </li>
-              <li class="">
                 <%= link_to "Skills", skills_index_path %>
               </li>
               <li class="">
-                <%= link_to "Other", other_index_path %>
+                <%= link_to "Personal details", details_index_path %>
               </li>
             </ul>
           </div>
@@ -52,9 +49,7 @@
       </div>
     </div>
     <div class="container main-content">
-      <div class="row">
         <%= yield %>
-      </div>
     </div>
 
     <footer class="footer">
