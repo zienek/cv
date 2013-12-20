@@ -1,53 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="A business card of Pawel Zienkiewicz">
-  <meta name="author" content="Pawel Zienkiewicz">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A business card of Pawel Zienkiewicz">
+    <meta name="author" content="Pawel Zienkiewicz">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pawel Zienkiewicz - business card</title>
+    <title>Pawel Zienkiewicz - business card</title>
 
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag "bootstrap-responsive.min", :media => "all" %>
-  <%= stylesheet_link_tag    "font"    , :media => "all" %> 
-</head>
-
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "bootstrap-responsive.min", :media => "all" %>
+    <%= stylesheet_link_tag    "font"    , :media => "all" %> 
+  </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    
+    <%= nav_bar :fixed => :top, :brand => "Pawel Zienkiewicz", :class => "navbar-inverse", :responsive => true do %>
+      <%= menu_group do %>
+        <%= menu_item "Start", root_path %>
+        <%= menu_item "Experience", experience_index_path %>
+        <%= menu_item "Education", education_index_path %>
+        <%= menu_item "Skills", skills_index_path %>
+        <%= menu_item "Personal details", details_index_path %>
+      <% end %>      
+    <% end %>
 
-    <!-- Navbar ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Pawel Zienkiewicz</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <%= link_to "Start", root_path %>
-              </li>
-              <li class="">
-                <%= link_to "Experience", experience_index_path %>
-              </li>
-              <li class="">
-                <%= link_to "Education", education_index_path %>
-              </li>
-              <li class="">
-                <%= link_to "Skills", skills_index_path %>
-              </li>
-              <li class="">
-                <%= link_to "Personal details", details_index_path %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     <div class="container main-content">
         <%= yield %>
     </div>
