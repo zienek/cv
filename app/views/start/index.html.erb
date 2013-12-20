@@ -15,11 +15,37 @@
 <span style="color: #66d9ef">end</span>
             </pre>
           </div>
-            <p style="padding-top:20px"> <%= link_to "Hello.new" , details_index_path, :class => 'btn btn-primary btn-large btn-block' %> </p>
+            <p style="padding-top:20px">
+              <a href="#myShortDesc" class='btn btn-primary btn-large btn-block' role="button" data-toggle="modal">Hello.new</a>
+            </p>
           </div>
           <div class='span5'>
             <%= image_tag 'pz1_1680.jpg', width: '390'%>
           </div>
+        </div>
+      </div>
+      
+      <div id="myShortDesc" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myShortDesc" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Boost your business</h3>
+        </div>
+        <div class="modal-body">
+          <p><strong>I am ready to develop new features for your software.</strong></p>
+          <p>Skills which you may notice as interesting:
+            <ul>
+              <li>I start feature development with tests. </li>
+              <li>I do like Continuous Delivery cycle. After each week you know what is done, and how it looks.</li>
+              <li>Planning behavior during writing spec's induce clean code.</li>
+              <li>I'm a Certified Scrum Master</li>
+            </ul>            
+          </p>
+          <p>
+            Close this modal, and take a look at my experience. 
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
         </div>
       </div>
   
