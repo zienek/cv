@@ -32,11 +32,18 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>Pawel Zienkiewicz.</p>
+        <p>Pawel Zienkiewicz - business card.</p>
+        <ul class="footer-links">
+          <li><a href="http://www.linkedin.com/pub/pawel-zienkiewicz/4b/67/3a2">
+            <%= image_tag "linkedin_icon.png", width: "60px", height: "60px" %>
+              </a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="https://twitter.com/Zienek">
+            <%= image_tag "twitter_icon.png", width: "60px", height: "60px" %>
+          </a></li>
+        </ul>
       </div>
     </footer>
-
     <%= javascript_include_tag "jquery" %>
     <%= javascript_include_tag "application" %>
     
